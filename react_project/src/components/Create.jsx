@@ -13,7 +13,7 @@ const Create = () => {
     const noteRef = useRef();
 
     //functions
-    const createNewNote = () => {
+    const showCreateNewNote = () => {
         setFormClass('');
         setLineClass('hide');
     }
@@ -61,7 +61,7 @@ const Create = () => {
         <div className={lineClass}>
             <div>{url}</div>
             <div>
-                <button onClick={createNewNote}>Созать новую заметку
+                <button onClick={showCreateNewNote}>Созать новую заметку
                 </button>
             </div>
         </div>
