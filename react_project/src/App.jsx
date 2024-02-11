@@ -21,6 +21,7 @@ function App() {
       <header>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/create">Create</Link>
         <Link to="/">Home</Link>
       </header>
       <Routes>
@@ -29,6 +30,7 @@ function App() {
         <Route path="/create" element={<Create/>}  />
         <Route path="/note" element={<Note/>}  />
         <Route path="/note/:noteURL" element={<Note/>}  />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );
