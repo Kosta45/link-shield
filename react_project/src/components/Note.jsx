@@ -4,8 +4,15 @@ import env from '../env.json';
 
 
 const Note = () => {
+
     let {noteURL} = useParams();
+
+    //states
     const [noteText, setNoteText] = useState('');
+    const [lineClass, setLineClass] = useState('hide');
+    const [formClass, setFormClass] = useState('hide');
+    const [errorClass, setErrorClass] = useState('hide')
+
 
 
     useEffect(() => {
@@ -21,15 +28,23 @@ const Note = () => {
             .then(response => {
                 console.log(response);
                 if (response.result) {
-                    setNoteText(response.note) 
+                    setNoteText(response.note) ;
+                    setLineClass('');
+                    setFormClass('hide');
+                } else if (!response.result) {
+                    setLineClass('hide');
+                    setFormClass('hide');
                 }
             })
+        }
+        else {
+
         }
     }, []);
 
     return (
         <div>
-        <div>
+        <div className={lineClass}>
             <h4>Note:</h4>
             <div>{noteText}</div>
         </div>
