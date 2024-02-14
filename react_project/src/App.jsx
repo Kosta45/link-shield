@@ -22,6 +22,7 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/create">Create</Link>
+        <Link to='/note'>Note</Link>
         <Link to="/">Home</Link>
       </header>
       <Routes>
