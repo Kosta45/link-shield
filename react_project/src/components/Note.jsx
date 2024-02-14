@@ -21,14 +21,19 @@ const Note = () => {
             .then(response => {
                 console.log(response);
                 if (response.result) {
-                    setNoteText(response.note)
+                    setNoteText(response.note) 
                 }
             })
         }
     }, []);
 
     return (
-        <div></div>
+        <div>
+        <div>
+            <h4>Note:</h4>
+            <div>{noteText}</div>
+        </div>
+        </div>
     )
 }
 
