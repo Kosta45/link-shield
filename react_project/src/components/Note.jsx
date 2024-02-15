@@ -43,7 +43,9 @@ const Note = () => {
             })
         }
         else {
-
+            setLineClass('hide');
+            setErrorClass('hide');
+            setFormClass('');
         }
     }, []);
 
