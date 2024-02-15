@@ -11,7 +11,7 @@ const Note = () => {
     const [noteText, setNoteText] = useState('');
     const [lineClass, setLineClass] = useState('hide');
     const [formClass, setFormClass] = useState('hide');
-    const [errorClass, setErrorClass] = useState('hide')
+    const [errorClass, setErrorClass] = useState('hide');
 
 
 
@@ -31,9 +31,11 @@ const Note = () => {
                     setNoteText(response.note) ;
                     setLineClass('');
                     setFormClass('hide');
+                    setErrorClass('hide');
                 } else if (!response.result) {
                     setLineClass('hide');
                     setFormClass('hide');
+                    setErrorClass('')
                 }
             })
         }
@@ -47,6 +49,9 @@ const Note = () => {
         <div className={lineClass}>
             <h4>Note:</h4>
             <div>{noteText}</div>
+        </div>
+        <div className={errorClass}>
+            <p>Произошла ошибка. Такой note не найден.</p>
         </div>
         </div>
     )
