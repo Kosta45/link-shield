@@ -23,7 +23,6 @@ function App() {
         <Link to="/about">About</Link>
         <Link to="/create">Create</Link>
         <Link to='/note'>Note</Link>
-        <Link to="/">Home</Link>
       </header>
       <Routes>
         <Route path="/" element={<Main/>}></Route>

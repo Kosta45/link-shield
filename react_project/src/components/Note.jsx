@@ -38,7 +38,7 @@ const Note = () => {
                 } else if (!response.result) {
                     setLineClass('hide');
                     setFormClass('hide');
-                    setErrorClass('')
+                    setErrorClass('');
                 }
             })
         }
@@ -62,11 +62,18 @@ const Note = () => {
 
     }
 
+    const searchNote = () => {
+        window.location.href = env.url;
+    }
+
     return (
         <div>
         <div className={lineClass}>
             <h4>Note:</h4>
             <div>{noteText}</div>
+            <div>
+                <button onClick={searchNote}>Смотреть ещё один note</button>
+            </div>
         </div>
         <div className={errorClass}>
             <p>Произошла ошибка. Такой note не найден.</p>
