@@ -19,11 +19,16 @@ function App() {
   return (
     <div className="main">
       <header>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/create">Create</Link>
-        <Link to='/note'>Note</Link>
+        <nav> 
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li> <Link to="/create">Create</Link></li>
+            <li><Link to='/note'>Note</Link></li>
+          </ul>
+        </nav>
       </header>
+      <main>
       <Routes>
         <Route path="/" element={<Main/>}></Route>
         <Route path="/about" element={<About/>} />
@@ -32,6 +37,7 @@ function App() {
         <Route path="/note/:noteURL" element={<Note/>}  />
         <Route path="*" element={<Error />} />
       </Routes>
+      </main>
     </div>
   );
 }
