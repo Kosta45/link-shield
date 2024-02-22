@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  Routes, Link, Route
+  Routes, Link, Route, useLocation
 } from "react-router-dom";
 import Create from './components/Create';
 import Main from './components/Main';
@@ -12,19 +12,27 @@ import Error from './components/Error';
 import './App.css';
 
 
-    <Route exact path="/" element={<Main/>}></Route>
-
-
 function App() {
+
+  const location = useLocation();
+
   return (
     <div className="main">
       <header>
-        <nav> 
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li> <Link to="/create">Create</Link></li>
-            <li><Link to='/note'>Note</Link></li>
+        <nav className="nav justify-content-center" > 
+          <ul className="d-flex nav-item justify-content-center flex-row">
+            <li className="nav-link">
+              <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
+            </li>
+            <li className="nav-link">
+              <Link to="/create" className={location.pathname === '/create' ? 'active' : ''}>Create</Link>
+            </li>
+            <li className="nav-link">
+              <Link to='/note' className={location.pathname === '/note' ? 'active' : ''}>Note</Link>
+            </li>
           </ul>
         </nav>
       </header>
