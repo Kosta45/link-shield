@@ -36,7 +36,7 @@ function App() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main className="">
       <Routes>
         <Route path="/" element={<Main/>}></Route>
         <Route path="/about" element={<About/>} />
