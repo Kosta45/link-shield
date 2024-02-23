@@ -19,18 +19,18 @@ function App() {
   return (
     <div className="main">
       <header>
-        <nav className="nav justify-content-center" > 
-          <ul className="d-flex nav-item justify-content-center flex-row">
-            <li className="nav-link">
-              <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
+        <nav className="nav justify-content-center p-3 mb-2" > 
+          <ul className="d-flex justify-content-evenly nav-pills p-0">
+            <li className="nav-link bg-white">
+              <Link to="/" className={location.pathname === '/' ? 'active' : 'text-dark'}>Home</Link>
             </li>
-            <li className="nav-link">
+            <li className="nav-link bg-white">
               <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
             </li>
-            <li className="nav-link">
+            <li className="nav-link bg-white">
               <Link to="/create" className={location.pathname === '/create' ? 'active' : ''}>Create</Link>
             </li>
-            <li className="nav-link">
+            <li className="nav-link bg-white">
               <Link to='/note' className={location.pathname === '/note' ? 'active' : ''}>Note</Link>
             </li>
           </ul>
