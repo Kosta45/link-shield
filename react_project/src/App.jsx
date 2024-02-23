@@ -20,18 +20,18 @@ function App() {
     <div className="main">
       <header>
         <nav className="nav justify-content-center p-3 mb-2" > 
-          <ul className="d-flex justify-content-evenly nav-pills p-0">
-            <li className="nav-link bg-white">
-              <Link to="/" className={location.pathname === '/' ? 'active' : 'text-dark'}>Home</Link>
+          <ul className="d-flex justify-content-evenly nav nav-pills nav-fill p-0 bg-white rounded">
+            <li className="nav-item m-2">
+              <Link to="/" className={location.pathname === '/' ? 'active nav-link' : 'text-dark nav-link'}>Home</Link>
             </li>
-            <li className="nav-link bg-white">
-              <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
+            <li className="nav-item m-2">
+              <Link to="/about" className={location.pathname === '/about' ? 'active nav-link' : 'text-dark nav-link'}>About</Link>
             </li>
-            <li className="nav-link bg-white">
-              <Link to="/create" className={location.pathname === '/create' ? 'active' : ''}>Create</Link>
+            <li className="nav-item m-2">
+              <Link to="/create" className={location.pathname === '/create' ? 'active nav-link' : 'text-dark nav-link'}>Create</Link>
             </li>
-            <li className="nav-link bg-white">
-              <Link to='/note' className={location.pathname === '/note' ? 'active' : ''}>Note</Link>
+            <li className="nav-item m-2">
+              <Link to='/note' className={location.pathname === '/note' ? 'active nav-link' : 'text-dark nav-link'}>Note</Link>
             </li>
           </ul>
         </nav>
