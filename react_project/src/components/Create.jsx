@@ -61,11 +61,12 @@ const Create = () => {
                 </div>
             </form>
           </div>
-           <div className={`${lineClass} `}>
-            <div>{url}</div>
-            <div>
-                <button onClick={showCreateNewNote}>Созать новую заметку
-                </button>
+           <div className={`${lineClass}`}>
+            <div className='</div>'>
+             <div className='mb-4'>{url}</div>
+             <div>
+                <button onClick={showCreateNewNote} className='btn btn-primary'>Созать новую заметку</button>
+             </div>
             </div>
            </div>
         </div>
