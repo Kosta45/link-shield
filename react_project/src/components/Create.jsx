@@ -7,7 +7,7 @@ const Create = () => {
     //states
     const [url, setUrl] = useState('');
     const [lineClass, setLineClass] = useState('hide');
-    const [formClass, setFormClass] = useState('');
+    const [formClass, setFormClass] = useState('d-flex flex-column');
 
     //refs
     const noteRef = useRef();
@@ -50,20 +50,24 @@ const Create = () => {
     }
 
     return (
-    <div>
-        <div>
+    <div className='container create bg-white d-flex align-items-center rounded mt-5'>
+        <div className='d-flex flex-column note'>
+          <div className=''>
             <form action="" onSubmit={loadDataFromForm} className={formClass}>
-                <label htmlFor="">Введите заметку</label>
-                <textarea name="" id="note" defaultValue="Test" ref={noteRef}></textarea>
-                <button type='submit'>Создать</button>
+                <div className='d-flex flex-column'>
+                <label htmlFor="" for="note" class="form-label">Введите заметку</label>
+                <textarea name="" id="note" defaultValue="" ref={noteRef} className="note form-control" rows="3"></textarea>
+                <button type='submit' className='btn btn-primary mt-4'>Создать</button>
+                </div>
             </form>
-        </div>
-        <div className={lineClass}>
+          </div>
+           <div className={`${lineClass} `}>
             <div>{url}</div>
             <div>
                 <button onClick={showCreateNewNote}>Созать новую заметку
                 </button>
             </div>
+           </div>
         </div>
     </div>
     )
