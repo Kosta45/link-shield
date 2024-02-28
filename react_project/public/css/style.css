@@ -152,7 +152,8 @@ body{
     width: 20%
 }
 
-.create{
+.create,
+.note-container{
     width: 40%;
     height: 200px;
 }
