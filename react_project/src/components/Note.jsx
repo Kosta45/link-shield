@@ -67,7 +67,7 @@ const Note = () => {
     }
 
     return (
-        <div className="note-container container bg-white d-flex align-items-center rounded mt-5'">
+        <div className="note-container container bg-white d-flex align-items-center rounded mt-5">
              <div className="d-flex flex-column note">
                 <div className={lineClass}>
                    <h4>Note:</h4>
