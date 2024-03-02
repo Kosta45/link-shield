@@ -69,25 +69,37 @@ const Note = () => {
     return (
         <div className="note-container container bg-white d-flex align-items-center rounded mt-5">
              <div className="d-flex flex-column note">
+
                 <div className={lineClass}>
+                 <div className="d-flex flex-column">
                    <h4>Note:</h4>
-                   <div>{noteText}</div>
+                   <div className="note-input">{noteText}</div>
                    <div>
-                     <button onClick={searchNote}>Смотреть ещё один note</button>
+                     <button onClick={searchNote} className="btn btn-primary mt-4 note">Смотреть ещё один note</button>
                   </div>
+                 </div>
                 </div>
+                
+                
                 <div className={errorClass}>
-                      <p>Произошла ошибка. Такой note не найден.</p>
+                    <div className="d-flex justify-content-center">
+                      <div className="d-flex flex-column">
+                          <p>Произошла ошибка. Такой note не найден.</p>
+                          <a href="/note" className="btn btn-primary btn-lg border-0">Искать другой note</a>
+                      </div>
+                    </div>
                 </div>
+
                 <div className={formClass}>
-                <div className="d-flex flex-column">
-                  <form action="" onSubmit={getNote}>
-                  <label htmlFor="url">Введите hash заметки:</label>
-                  <input type="text" name="url" id="url" className="form-control note mt-4" ref={urlInput}/>
-                  <button type="submit" className="btn btn-primary mt-4 note">Искать Note</button>
-                  </form>
+                  <div className="d-flex flex-column">
+                       <form action="" onSubmit={getNote}>
+                          <label htmlFor="url">Введите hash заметки:</label>
+                          <input type="text" name="url" id="url" className="form-control note mt-4" ref={urlInput}/>
+                          <button type="submit" className="btn btn-primary mt-4 note">Искать Note</button>
+                       </form>
                   </div>
                 </div>
+
              </div>
         </div>
     )
