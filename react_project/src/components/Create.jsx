@@ -30,7 +30,6 @@ const Create = () => {
         })
         .then(response => response.json())
         .then(response => {
-            console.log(response);
             if(response.result) {
                 setUrl(env.url+'/'+response.url)
             }
@@ -41,7 +40,6 @@ const Create = () => {
         event.preventDefault();
         let note = noteRef.current.value;
         note = note.trim();
-        console.log(note)
         if (note === '') {
             alert('Заполните поля');
             return false;
@@ -55,7 +53,7 @@ const Create = () => {
           <div className=''>
             <form action="" onSubmit={loadDataFromForm} className={formClass}>
                 <div className='d-flex flex-column'>
-                <label htmlFor="" for="note" class="form-label">Введите заметку</label>
+                <label htmlFor='note' className="form-label">Введите заметку</label>
                 <textarea name="" id="note" defaultValue="" ref={noteRef} className="note form-control" rows="3"></textarea>
                 <button type='submit' className='btn btn-primary mt-4'>Создать</button>
                 </div>
