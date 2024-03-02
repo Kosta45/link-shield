@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaShieldAlt } from "react-icons/fa";
 
 
 const About = () => {
@@ -7,7 +6,7 @@ const About = () => {
         <div className='d-flex flex-column container bg-white d-flex rounded mt-5'>
         <div className="d-flex flex-column mt-3">
         <p> 
-            LinkShield <FaShieldAlt className="mb-1" /> - сервис для обмена заметками. Создайте заметку, отправте ссылку на заметку и ваш друг сможет её посмотреть. После просмотра заметка будет удалена.
+            LinkShield - сервис для обмена заметками. Создайте заметку, отправте ссылку на заметку и ваш друг сможет её посмотреть. После просмотра заметка будет удалена.
         </p>
          <p>Как сделать заметку?</p>
          <ul>
