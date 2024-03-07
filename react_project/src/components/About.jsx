@@ -3,7 +3,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className='d-flex flex-column container bg-white d-flex rounded mt-5'>
+        <div className='d-flex flex-column about-container container bg-white d-flex rounded mt-5'>
         <div className="d-flex flex-column mt-3">
         <p> 
             LinkShield - сервис для обмена заметками. Создайте заметку, отправте ссылку на заметку и ваш друг сможет её посмотреть. После просмотра заметка будет удалена.

@@ -10,7 +10,7 @@ const Main = () => {
               </div>
         </div>
 
-        <div className='d-flex flex-column container bg-white d-flex rounded mt-5'>
+        <div className='d-flex flex-column main-conateiner container bg-white d-flex rounded mt-5'>
              <div className="d-flex flex-column mt-3">
                 <p> 
                   LinkShield - сервис для обмена заметками. Создайте заметку, отправте ссылку на заметку и ваш друг сможет её посмотреть. После просмотра заметка будет удалена.

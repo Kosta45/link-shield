@@ -188,7 +188,12 @@ body{
 }
 
 .main-btns {
-    width: 20%
+    width: 25%
+}
+
+.main-conateiner,
+.about-container {
+    width: 100%;
 }
 
 .create,
@@ -213,4 +218,17 @@ body{
 
 .active {
     color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    
+.main-conateiner,
+.about-container {
+    width: 80%;
+}
+
+.main-btns {
+    width: 50%;
+}
+
 }
