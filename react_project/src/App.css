@@ -196,7 +196,7 @@ body{
     width: 100%;
 }
 
-.create,
+.create-container,
 .note-container,
 .about {
     width: 40%;
@@ -212,12 +212,24 @@ body{
     width: 100%;
 }
 
+.output-hash{
+    width: 100%;
+}
+
+.link-note {
+    width: 50%;
+}
+
 .hide {
     display: none;
 }
 
 .active {
     color: red;
+}
+
+.new-create {
+    width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -231,4 +243,20 @@ body{
     width: 50%;
 }
 
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .create-container {
+        width: 70%;
+    }
+
+    .note-container {
+        width: 70%;
+    }
+
+    .note-textarea {
+        height: 330px;
+    }
+    
 }

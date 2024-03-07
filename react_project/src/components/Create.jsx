@@ -48,25 +48,28 @@ const Create = () => {
     }
 
     return (
-    <div className='container create bg-white d-flex align-items-center rounded mt-5'>
+    <div className='container create-container bg-white d-flex align-items-center rounded mt-5'>
         <div className='d-flex flex-column note'>
+
           <div className=''>
             <form action="" onSubmit={loadDataFromForm} className={formClass}>
                 <div className='d-flex flex-column'>
                 <label htmlFor='note' className="form-label">Введите заметку</label>
-                <textarea name="" id="note" defaultValue="" ref={noteRef} className="note form-control" rows="3"></textarea>
+                <textarea name="" id="note" defaultValue="" ref={noteRef} className="note note-textarea form-control" rows="3"></textarea>
                 <button type='submit' className='btn btn-primary mt-4'>Создать</button>
                 </div>
             </form>
           </div>
+
            <div className={`${lineClass}`}>
-            <div className=''>
-              <div className='mb-4'>{url}</div>
+            <div className='d-flex flex-column'>
+              <pre className='mb-4'>{url}</pre>
               <div>
-                <button onClick={showCreateNewNote} className='btn btn-primary'>Созать новую заметку</button>
+                <button onClick={showCreateNewNote} className='btn btn-primary new-create'>Созать новую заметку</button>
               </div>
             </div>
            </div>
+
         </div>
     </div>
     )
